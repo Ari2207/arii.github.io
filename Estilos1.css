@@ -1,0 +1,37 @@
+h2 {  /* este estilo afecta a todos los h2 de INDEX2.HTML */
+    font-size: 60px;
+    color: rgba(6, 61, 240, 0.945);
+    background-color: rgb(75, 156, 28);
+}
+
+
+.textomorado {   /* clases css que aplica color morado y fuente lucia sans */
+    color: blueviolet;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.claseContenedorDiv1 {  /* afectara a agunos contenedores div  */
+    font-size: 40px;
+    width: 800px; 
+    height: 600px;
+    background-color: rgb(27, 78, 76);
+
+}
+
+#fondoverdeclaro {  /* identificador que solo afecta a una etiqueta */
+    background-color: rgb(160, 103, 17);
+    font-size: 30px;
+    text-align: center;
+}
+
+.textmorado:hover { /* pseudoclase que afecta al posicionarte con mouse */
+    background-color: rgb(146, 34, 15);
+color: hsl(165, 67%, 25%);
+
+}
+
+.claseContenedorDiv1::first-letter { /* seoudoelemento que afeca a la primera letra */ 
+     font-size: 40px;
+     color: rgb(156, 27, 27);
+
+}
