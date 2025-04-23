@@ -296,20 +296,20 @@ h2 { /* este estilo afecta a todos los h2 de INDEX2.html */
 
 }
 
-.bloque{/estillo display por defecto/
+.bloque{/estilo display por defecto/
     background-color:blue;
   font-size: 20px;
   margin: 20px;
   color: rgb(60, 148, 119);
   }
-  .tiponone{/estillo display por none/
+  .tiponone{/estilo display por none/
     background-color:blue;
   font-size: 20px;
   margin: 20px;
   color: aquamarine;
   display: none;
   }
-  .tipohidden{ /*estillo display hidden */
+  .tipohidden{ /*estilo display hidden */
     background-color:blue;
   font-size: 20px;
   margin: 20px;
