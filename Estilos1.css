@@ -296,20 +296,20 @@ h2 { /* este estilo afecta a todos los h2 de INDEX2.html */
 
 }
 
-.bloque{/estilo display por defecto/
+.bloque{/estillo display por defecto/
     background-color:blue;
   font-size: 20px;
   margin: 20px;
   color: rgb(60, 148, 119);
   }
-  .tiponone{/estilo display por none/
+  .tiponone{/*estillo display por none*/
     background-color:blue;
   font-size: 20px;
   margin: 20px;
   color: aquamarine;
   display: none;
   }
-  .tipohidden{ /*estilo display hidden */
+  .tipohidden{ /*estillo display hidden */
     background-color:blue;
   font-size: 20px;
   margin: 20px;
@@ -342,4 +342,33 @@ list-style-type: none;
 background-color: rgba(19, 102, 16, 0.5);
 
 }
+
+.claseNav ul{
+    list-style-type: none;
+    display: block;
+    margin:0px
+    padding:0px
+}
+
+.claseNav li a{
+    text-decoration: none
+    padding: 6px  11px;
+    display: block;
+}
+
+.claseNav > li{
+    float: left;
+}
+
+.claseNav li ul{
+    display:none;
+    position:absolute;
+    min-width: 140px; 
+    color: rgb(225, 253, 121)
+}
+
+.claseNav li:hover{
+    display: block;
+}
+
 
