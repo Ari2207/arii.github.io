@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Estilos1.css">
+<script type="text/javascript" src="SCRPT1.js"></script>
+
 
     <title> INSTITUTO CERTUS- PAGINA CON CSS</title>
 </head>
@@ -393,65 +395,180 @@ las doscientas millas, de conformidad con la ley y
 
 
 
-<h2> FORMULARIO DE REGRISTO </h2>
+ <h2> FORMULARIO DE REGISTRO </h2>
 
 
-
-<form action="ARIIII.HTML" method="post">   
-    <p> <label for="nombre">Nombre:  <input type="text" id="nombre"></label></p>
-    <p> <label for="apellido">Apellido:  <input type="text" id="nombre"></label></p>
-    <p> <label for="edad">Edad:  <input type="text" id="nombre"></label></p>
-    <p> <label for="observacion">Observacion: <textarea name="observacion" id="obeservacion" style="height: 180px; width: 300px; font-size: 25px;"></textarea></label> </p>
-    
-    <p>
-      <label for="estatura">Estatura
-        <select name="grupoestatura" id="estatura">
-          <option value="Seleccine">Seleccione </option>
-          <option value="menor de 1.50m"> menos de 1.50m </option>
-          <option value="de 1.50m a 1.59"> de 1.50 a 1.59 </option>
-          <option value="de 1.60m a 1.69"> de 1.60 a 1.69 </option>
-          <option value="mayor o igual a 1.70"> mayor o igual a 1.70 </option>
-
-        </select>
-
-      </label>
-    </p>
-
-<p><label>   Cursos llevados:   </label>
-  <br>
-<input type="checkbox" name="cursos" value="Introdución" id="Introducción">
- <label for="Introdución"> Introducción </label> <br>
-<input type="checkbox" name="cursos" value="Lenguaje DSS" id="LDSS">
-  <label for="Lenguaje"> Lenguaje DSS </label> <br>
-  <input type="checkbox" name="cursos" value="Nuevas Tendencas" id="Nuevas Tendencias">
- <label for="Nuevas Tendencias"> Nuevas Tendencias </label> <br>
- <input type="checkbox" name="cursos" value="Matematica" id="Matematica">
- <label for="Matematica"> Matematica </label> <br>
-
-</p>
-
-<p> <label> Ciclo actual </label> </p>
-  <br>
-<input style="scale: 1.5;" type="radio" name="Ciclo" value="Ciclo 1" id="Primero">
- <label> Primero</label> <br>
- <input style="scale: 1.5;" type="radio" name="Ciclo" value="Ciclo 1" id="Segundo">
- <label> Segundo</label> <br>
- <input style="scale: 1.5;" type="radio" name="Ciclo" value="Ciclo 1" id="Tercero">
- <label> Tercero</label> <br>
- <input style="scale: 1.5;" type="radio" name="Ciclo" value="Ciclo 1" id="Cuarto">
- <label> Cuarto</label> <br>
- <input style="scale: 1.5;" type="radio" name="Ciclo" value="Ciclo 1" id="Quinto">
- <label> Quinto</label> <br>
+ <form action="TODOSOBREMI.html"   method="post">
+ 
+ <p> <label for="nombre"  > Nombre: <input type="text" name="nombre"  id="nombre" class="datosPersonales" required   > </label> </p>
+ <p> <label for="apellido"> Apellido: <input type="text" name="apellido" id="apellido" class="datosPersonales"> </label> </p>
+ <p> <label for="edad"> Edad: <input type="number" id="edad" name="edad"  class="datosPersonales" min="18" max="80"> </label> </p>
+ 
+ <p> <label for="observacion"  style="font-size: 30px;"> Observacion: 
+         <textarea name="observacion" id="observacion" 
+           style="height:180px ;  width:300px ; font-size: 25px;">
+         </textarea>
+      </label> 
+ </p>
+ <button style="font-size: 30px;" type="button" onclick="FCapturarNombre()"> Copiar NOMBRE a observaciones</button> <br> <br><br>
+ <p> 
+     <label for="estatura"> Estatura     
+         <select name="grupoestatura" id="estatura"    >
+           <option value="Seleccione"> Seleccione  </option>
+             <option value="menor de 1.50m"> menor de 1.50m  </option>
+             <option value="de 1.50m  a 1.59"> de 1.50m  a 1.59  </option>
+             <option value="de 1.60m  a 1.69"> de 1.60m  a 1.69  </option>
+             <option value="mayor o igual a 1.70m"> mayor o igual a 1.70m  </option>
+ 
+ 
+         </select>
+     </label>
+ </p>
+ 
+ 
+ <p style="font-size: 20px;"> <label for="numColegios"> Numero Colegios que estudió: <input type="number" id="numColegios" name="numColegios"  style="font-size: 20px;" min="1" max="12"> </label> </p>
+ 
+ <div id="DetalleColegios"> DEtalle Estudios: </div>
+ 
+ <br>
+ <p> <label > Curso llevados  </label>
+   <br>
+     <input type="checkbox" name="cursos" value="matematica" id="matematica"  >
+       <label for="matematica"> Matematica </label> <br>
+     <input type="checkbox" name="cursos" value="LENGUAJE DSS" id="LDSS"  >
+       <label for="LDSS"> LENGUAJE DSS </label>    <br>
+     <input type="checkbox" name="cursos" value="Introduccion investigacion" id="INTRO_INV"  >
+       <label for="INTRO_INV"> Introduccion investigacion </label>    <br>
+     <input type="checkbox" name="cursos" value="NUEvas tendencias" id="Nuevas_Tendencias"  >
+       <label for="Nuevas_Tendencias"> NUEvas tendencias </label>  <br>
+ 
+ 
+ </p>
+ 
+ <p><label>Ciclo actual</label> <br>
+     <input style="scale:1.5 ;" id="Primero" type="radio" name="ciclo" value="Primero">
+     <label for="Primero">Primero</label><br>
+     <input style="scale:1.5 ;" id="Segundo" type="radio" name="ciclo" value="Segundo">
+     <label for="Segundo">Segundo</label><br>
+     <input style="scale:1.5 ;" id="Tercero" type="radio" name="ciclo" value="Tercero">
+     <label for="Tercero">Tercero</label><br>
+     <input style="scale:1.5 ;" id="Cuarto"  type="radio" name="ciclo" value="Cuarto">
+     <label for="Cuarto">Cuarto</label><br>
+     <input style="scale:1.5 ;" id="Quinto" type="radio" name="ciclo" value="Quinto">
+     <label for="Quinto">Quinto</label><br>
+     <input style="scale:1.5 ;" id="Sexto" type="radio" name="ciclo" value="Sexto" >
+     <label for="Sexto">Sexto</label>
+ </p>
+ 
+ 
  <label for="fecha"> SELECCIONE FECHA: 
-  <input style="font-size:25px" type="date" name="fecha" id="fecha">
-</label>
+   <input style="font-size:25px" type="date" name="fecha" id="fecha"    >
+ </label>
+ 
+ 
+ 
+ 
+ <br><br>
+ 
+ 
+ <label for="clave"> SELECCIONE CLAVE: 
+   <input  style="font-size:15px" type="password"    name="clave"  id="clave"  autofocus  
+     minlength="5" maxlength="10"           >
+ </label>
+ 
+ <br><br>
+ 
+ <label for="resetear"> RESETEAR: 
+   <input style="font-size:15px" type="reset" name="resetear" id="resetear"  >
+ </label>
+ 
+ <br><br>
+ <label for="email"> Ingrese Email: 
+   <input style="font-size:20px" type="email" name="correo" id="email" placeholder="@certus.edu.pe">
+ </label>
+ 
+ 
+ 
+ <br>
+ 
+ <button style="font-size:30px ;" type="button" 
+ onclick="FCapturarNombre()">       Copiar NOmbre a observaciones  </button>
+ <br> <br><br>
+ 
+ 
+ <button style="font-size:30px ;" type="button" 
+ onclick="FValidarCiclo()">Enviar ciclo a Observacion</button>
+ <br> <br><br>
+ 
+ 
+ <button style="font-size:30px ;" type="button" 
+ onclick="FCrearDatosCiclo() ">Enviar ciclo a observacion automatico</button>
+ <br> <br><br>
+ 
+ 
+ 
+ <button type="submit" style="font-size:30px ;" > enviar </button>
+ 
+ 
 
-<button type="submit" style="font-size:30px ;" > enviar </button>
+
+<script>
+  window.alert("Bienvenido"); // comando de windows
+  /*javascript acepta cualquier tipo de comentario */
+var val1 = 10;
+var val2 = 60;
+var suma = val1 + val2;
+var resta = val1 - val2;
+var multi = val1 * val2;
+var div = val1 / val2;
+console.log("El valor de la suma de ", val1," con ",val2," es :",suma);
+console.log("El valor de la resta de ", val1," con ",val2," es :",resta);
+console.log("El valor de la multiplicacion de ", val1," con ",val2," es :",multi);
+console.log("El valor de la division de ", val1," con ",val2," es :",div);
+
+</script>
+
+
+<!-- MANIPULACIÓN DEL DOM-->
+<section>
+  <h1 style="font-size: 50px;">EJEMPLLO DE MANIPULACIÓN DEL DOM </h1>
+  <P id="ejmDOM1" style="font-size: 25 px;"> Este es primer texto a aplicar DOM </P>
+  <p class="classDOM1" style="font-size: 25px;">Testo1 a aplicar DOM mediante class </p>
+  <p class="classDOM1" style="font-size: 25px;"> Texto2 a aplicar DOM mediante class</p>
+  <p class="classDOM1" style="font-size: 25px;"> Texto3 a aplicar DOM mediante class</p>
+
+  <button onclick="FCambioColor()"> CAMBIAR COOR por ID  </button>
+  <button onclick="FCambioClase1()"> CAMBIAR Por Clase  </button>
+  <button onclick="FCamvioTag1()"> CAMBIAR Por Tag h2 </button>
+
+
+<button onclick="FAgregarTextoPermante()"> Agregar texto a primera variable </button>
 
 
 
 
 
+
+
+
+
+
+
+
+<section>
+ <h2> Actvidad para el estudiante</h2>
+ <button style="font-size:25px ;" onclick="FVerificacion()">
+  verificacion de nombres</button>
+
+
+
+</section>
+
+
+
+<section>
+  <button style="font-size: 30px;" onclick="FVerificacion()">  </button>
+</section>
 
 
 
